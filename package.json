@@ -1,0 +1,14 @@
+{
+  "name": "astrofeedback",
+  "version": "1.0.0",
+  "description": "AstroFeedback is an open source project that helps you collect and organize user feedback. It is a simple and easy-to-use tool that can be used by anyone, regardless of their technical expertise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api":"cd api && nodemon server",
+    "client":"cd client && yarn dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

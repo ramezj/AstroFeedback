@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
+    "@lucia-auth/adapter-prisma": "^2.0.0",
     "@prisma/client": "^4.16.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
