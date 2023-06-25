@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "api":"cd api && nodemon server",
-    "client":"cd client && yarn dev"
+    "client":"cd src && yarn dev"
   },
   "keywords": [],
   "author": "",
