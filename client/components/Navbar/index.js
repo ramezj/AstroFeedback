@@ -1,5 +1,7 @@
 "use client"
 import { useSession, signIn, signOut } from "next-auth/react"
+import Link from 'next/link'
+
 export default function Navbar() {
   const { data: session } = useSession()
     return (
@@ -12,8 +14,8 @@ export default function Navbar() {
     <div className="dropdown dropdown-end mr-1 mt-2">
       {
         session 
-        ? <><button class="btn btn-primary normal-case">Dashboard</button></>
-        : <><button class="btn btn-primary normal-case">Sign In</button></>
+        ? <><Link href="/dashboard" class="btn btn-primary normal-case">Dashboard</Link></>
+        : <><Link href="/api/auth/signin" class="btn btn-primary normal-case">Sign In</Link></>
       }
     </div>
   </div>
