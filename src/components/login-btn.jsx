@@ -5,7 +5,9 @@ export default function Button() {
   if (session) {
     return (
       <>
-        Signed in as {session.user.email} <br />
+        <h1 class="text-2xl font-medium font-red">
+    Signed In As
+  </h1> {session.user.email} <br />
         <button onClick={() => signOut()}>Sign out</button>
       </>
     )
