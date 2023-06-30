@@ -16,7 +16,7 @@ export default function Component() {
         }
     })
   return (
-    <div className='bg-[url("/blue.png")] h-full min-h-screen bg-fill bg-no-repeat w-full'>
+    <div className='bg-[#010306] h-full min-h-screen bg-center bg-no-repeat w-full'>
     <title>AstroFeedback | Dashboard</title>
     <Navbar />
     <center>

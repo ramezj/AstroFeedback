@@ -63,6 +63,7 @@ model Feedback {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 model VerificationToken {
+  id         String   @id @default(cuid())
   identifier String
   token      String   @unique
   expires    DateTime

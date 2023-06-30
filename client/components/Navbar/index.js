@@ -14,8 +14,8 @@ export default function Navbar() {
     <div className="dropdown dropdown-end mr-2 mt-3">
       {
         session 
-        ? <><Link href="/dashboard" className="btn normal-case bg-indigo-500 text-white hover:bg-indigo-700">Dashboard</Link></>
-        : <><Link href="/api/auth/signin" className="btn normal-case bg-indigo-500 text-white hover:bg-indigo-700">Sign In</Link></>
+        ? <><Link href="/dashboard" className="btn normal-case bg-[#1a1c1e] text-white hover:bg-[#141618]">Dashboard</Link></>
+        : <><Link href="/api/auth/signin" className="btn normal-case bg-[#1a1c1e] text-white hover:bg-[#141618]">Sign In</Link></>
       }
     </div>
   </div>
