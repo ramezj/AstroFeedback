@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar"
 
 export default function Component() {
   return (
-    <div className='bg-[url("/blue.png")] h-full min-h-screen bg-fill bg-no-repeat w-full'>
+    <div className='bg-[url("/main.jpg")] h-full min-h-screen bg-bottom bg-cover bg-no-repeat w-full'>
       <title>AstroFeedback</title>
     <Navbar />
     </div>

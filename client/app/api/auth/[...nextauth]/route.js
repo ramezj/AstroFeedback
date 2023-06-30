@@ -14,19 +14,16 @@ export const authOptions = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET
         }),
         GithubProvider({
-            clientId: process.env.GITHUB_ID,
+            clientId: process.env.GITHUB_CLIENT_ID,
             clientSecret: process.env.GITHUB_SECRET
         }),
-        EmailProvider({
-            server: process.env.EMAIL_SERVER,
-            from: process.env.EMAIL_FROM
-          }),
+        // EmailProvider({
+        //     server: process.env.EMAIL_SERVER,
+        //     from: process.env.EMAIL_FROM
+        //   }),
     ],
-    session: {
-        strategy: "jwt",
-    },
-    // pages: {
-    //     signIn: "/login",
+    // session: {
+    //     strategy: "jwt",
     // },
     adapter: PrismaAdapter(prisma),
     secret: process.env.NEXTAUTH_SECRET,

@@ -11,11 +11,11 @@ export default function Navbar() {
     <Link href="/" className="btn btn-ghost normal-case text-xl ml-1 mt-2">🚀 AstroFeedback</Link>
   </div>
   <div className="flex-none gap-2">
-    <div className="dropdown dropdown-end mr-1 mt-2">
+    <div className="dropdown dropdown-end mr-2 mt-3">
       {
         session 
-        ? <><Link href="/dashboard" class="btn btn-primary normal-case">Dashboard</Link></>
-        : <><Link href="/api/auth/signin" class="btn btn-primary normal-case">Sign In</Link></>
+        ? <><Link href="/dashboard" className="btn normal-case bg-indigo-500 text-white hover:bg-indigo-700">Dashboard</Link></>
+        : <><Link href="/api/auth/signin" className="btn normal-case bg-indigo-500 text-white hover:bg-indigo-700">Sign In</Link></>
       }
     </div>
   </div>

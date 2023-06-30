@@ -5,15 +5,18 @@ import axios from "axios"
 export default function Example() {
     const [ email, setEmail ] = useState();
     const submit = async () => {
-      const signInResult = await signIn('email', {
-        email:email,
-        redirect:false,
-        callbackUrl:'/dashboard'
-      })
+      await signIn('email', email);
+    }
+    const googleSignIn = async () => {
+      await signIn('google', {callbackUrl: '/dashboard'})
+    }
+    const githubSignIn = async () => {
+      await signIn('github', {callbackUrl: '/dashboard'})
     }
     return (
-      <>
+      <div className='bg-[#010306] h-full min-h-screen bg-center bg-no-repeat w-full'>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+          <br/><br/><br/>
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <img
               className="mx-auto h-10 w-auto"
@@ -50,18 +53,25 @@ export default function Example() {
                 >
                   Sign In with Email
                 </button>
+                <br />
+                <button
+                onClick={googleSignIn}
+                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Google
+                </button>
+                <br />
+                <button
+                onClick={githubSignIn}
+                className="flex w-full justify-center rounded-md bg-indigo-600 px-2 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Github
+                </button>
               </div>
             </form>
-  
-            <p className="mt-10 text-center text-sm text-gray-500">
-              Not a member?{' '}
-              <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                Start a 14 day free trial
-              </a>
-            </p>
           </div>
         </div>
-      </>
+      </div>
     )
   }
   
