@@ -15,7 +15,7 @@ export default function Navbar() {
       {
         session 
         ? <><Link href="/dashboard" className="btn normal-case bg-[#1a1c1e] text-white hover:bg-[#141618]">Dashboard</Link></>
-        : <><Link href="/api/auth/signin" className="btn normal-case bg-[#1a1c1e] text-white hover:bg-[#141618]">Sign In</Link></>
+        : <><button onClick={() => {signIn("google")}} className="btn normal-case bg-[#1a1c1e] text-white hover:bg-[#141618]">Sign In</button></>
       }
     </div>
   </div>

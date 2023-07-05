@@ -57,6 +57,7 @@ model Feedback {
   body      String
   createdAt DateTime @default(now())
   email     String
+  type String?
   geo       String?
   ipAddress String?
   website   String?
